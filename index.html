@@ -1,82 +1,135 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ปรึกษาสุขภาพจิตออนไลน์</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-            margin: 0;
-            padding: 0;
-            color: #333;
-        }
-        header {
-            background-color: #4CAF50;
-            color: white;
-            text-align: center;
-            padding: 1rem;
-        }
-        section {
-            padding: 2rem;
-        }
-        .contact-form {
-            background-color: white;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        .contact-form label {
-            display: block;
-            margin-bottom: 0.5rem;
-        }
-        .contact-form input, .contact-form textarea {
-            width: 100%;
-            padding: 0.8rem;
-            margin-bottom: 1rem;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-        .contact-form button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 0.8rem 2rem;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        .contact-form button:hover {
-            background-color: #45a049;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>รับปรึกษาสุขภาพจิต - ใส่ใจสุขภาพใจ</title>
+  <style>
+    /* Reset & base */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f0f4f8;
+      color: #333;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      background: #4caf50;
+      color: white;
+      padding: 1.5rem 1rem;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    }
+    header h1 {
+      margin-bottom: 0.3rem;
+      font-weight: 700;
+      font-size: 1.8rem;
+    }
+    header p {
+      font-size: 1rem;
+      font-weight: 500;
+      opacity: 0.9;
+    }
+    main {
+      flex-grow: 1;
+      max-width: 600px;
+      margin: 2rem auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: #2f5d3a;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+    label {
+      font-weight: 600;
+      color: #444;
+    }
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      padding: 0.9rem 1rem;
+      border: 1.8px solid #b8d5b8;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: border-color 0.3s ease;
+      resize: vertical;
+    }
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    textarea:focus {
+      border-color: #4caf50;
+      outline: none;
+      box-shadow: 0 0 6px rgba(76, 175, 80, 0.5);
+    }
+    textarea {
+      min-height: 100px;
+      font-family: inherit;
+    }
+    button {
+      background-color: #4caf50;
+      color: white;
+      font-weight: 700;
+      border: none;
+      padding: 1rem;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 1.1rem;
+      transition: background-color 0.3s ease;
+      user-select: none;
+    }
+    button:hover,
+    button:focus {
+      background-color: #388e3c;
+      outline: none;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #777;
+      background: #e6eee6;
+      margin-top: auto;
+    }
+
+    /* Responsive */
+    @media (max-width: 640px) {
+      main {
+        margin: 1rem;
+        padding: 1.5rem;
+      }
+    }
+  </style>
 </head>
 <body>
+  <header>
+    <h1>รับปรึกษาสุขภาพจิต</h1>
+    <p>ใส่ใจสุขภาพใจ ปรึกษาได้ง่าย ๆ กับผู้เชี่ยวชาญ</p>
+  </header>
 
-<header>
-    <h1>ปรึกษาสุขภาพจิตออนไลน์</h1>
-    <p>ให้คำปรึกษาและสนับสนุนด้านสุขภาพจิตโดยผู้เชี่ยวชาญ</p>
-</header>
+  <main>
+    <h2>ติดต่อขอรับคำปรึกษา</h2>
+    <form action="#" method="POST" onsubmit="return submitForm(event)">
+      <label for="name">ชื่อ-นามสกุล</label>
+      <input type="text" id="name" name="name" placeholder="กรอกชื่อของคุณ" required />
 
-<section>
-    <h2>ติดต่อเรา</h2>
-    <div class="contact-form">
-        <form action="submit_form.php" method="POST">
-            <label for="name">ชื่อ-นามสกุล:</label>
-            <input type="text" id="name" name="name" required>
+      <label for="email">อีเมล</label>
+      <input type="email" id="email" name="email" placeholder="example@email.com" required />
 
-            <label for="email">อีเมล:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="message">ข้อความของคุณ:</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
-
-            <button type="submit">ส่งข้อความ</button>
-        </form>
-    </div>
-</section>
-
-</body>
-</html>
+      <label for="message">ข้อความ</label>
+      <textarea id="message" name="message" pla
