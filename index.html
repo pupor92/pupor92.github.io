@@ -3,115 +3,140 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>รับปรึกษาสุขภาพจิต - ใส่ใจสุขภาพใจ</title>
+  <title>รับปรึกษาสุขภาพจิต - ใส่ใจใจสดใส</title>
   <style>
-    /* Reset & base */
+    /* Reset */
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
+
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f0f4f8;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
       color: #333;
-      line-height: 1.6;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
     }
+
     header {
-      background: #4caf50;
-      color: white;
-      padding: 1.5rem 1rem;
+      background-color: #ff6f61;
+      padding: 1.8rem 1rem;
       text-align: center;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      color: white;
+      box-shadow: 0 4px 10px rgba(255,111,97,0.5);
     }
+
     header h1 {
+      font-size: 2.2rem;
       margin-bottom: 0.3rem;
       font-weight: 700;
-      font-size: 1.8rem;
+      letter-spacing: 1.5px;
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.2);
     }
+
     header p {
-      font-size: 1rem;
+      font-size: 1.1rem;
       font-weight: 500;
       opacity: 0.9;
     }
+
     main {
-      flex-grow: 1;
-      max-width: 600px;
-      margin: 2rem auto;
       background: white;
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      max-width: 600px;
+      margin: 2rem auto 3rem;
+      padding: 2.5rem 2rem;
+      border-radius: 20px;
+      box-shadow: 0 12px 30px rgba(255,111,97,0.25);
     }
-    h2 {
+
+    main h2 {
       text-align: center;
-      margin-bottom: 1.5rem;
-      color: #2f5d3a;
+      color: #ff6f61;
+      margin-bottom: 2rem;
+      font-weight: 700;
+      font-size: 1.8rem;
     }
+
     form {
       display: flex;
       flex-direction: column;
-      gap: 1.2rem;
+      gap: 1.4rem;
     }
+
     label {
       font-weight: 600;
-      color: #444;
+      color: #ff6f61;
+      font-size: 1rem;
+      letter-spacing: 0.03em;
     }
+
     input[type="text"],
     input[type="email"],
     textarea {
-      padding: 0.9rem 1rem;
-      border: 1.8px solid #b8d5b8;
-      border-radius: 8px;
+      padding: 1rem 1.2rem;
+      border: 2px solid #ffb5a7;
+      border-radius: 12px;
       font-size: 1rem;
-      transition: border-color 0.3s ease;
+      font-family: inherit;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
       resize: vertical;
     }
+
     input[type="text"]:focus,
     input[type="email"]:focus,
     textarea:focus {
-      border-color: #4caf50;
+      border-color: #ff6f61;
+      box-shadow: 0 0 8px rgba(255,111,97,0.6);
       outline: none;
-      box-shadow: 0 0 6px rgba(76, 175, 80, 0.5);
     }
+
     textarea {
-      min-height: 100px;
-      font-family: inherit;
+      min-height: 120px;
     }
+
     button {
-      background-color: #4caf50;
+      background: #ff6f61;
       color: white;
       font-weight: 700;
       border: none;
-      padding: 1rem;
-      border-radius: 10px;
+      padding: 1.2rem 0;
+      font-size: 1.2rem;
+      border-radius: 15px;
       cursor: pointer;
-      font-size: 1.1rem;
-      transition: background-color 0.3s ease;
+      letter-spacing: 0.05em;
+      transition: background 0.3s ease;
       user-select: none;
+      box-shadow: 0 6px 15px rgba(255,111,97,0.4);
     }
+
     button:hover,
     button:focus {
-      background-color: #388e3c;
+      background: #ff3b2e;
+      box-shadow: 0 8px 20px rgba(255,59,46,0.6);
       outline: none;
     }
+
     footer {
       text-align: center;
       padding: 1rem;
       font-size: 0.9rem;
-      color: #777;
-      background: #e6eee6;
+      color: #ff6f61;
+      background: #fff1f0;
       margin-top: auto;
+      font-weight: 600;
+      letter-spacing: 0.03em;
     }
 
-    /* Responsive */
     @media (max-width: 640px) {
       main {
         margin: 1rem;
-        padding: 1.5rem;
+        padding: 2rem 1.5rem;
+      }
+      header h1 {
+        font-size: 1.8rem;
       }
     }
   </style>
@@ -119,12 +144,12 @@
 <body>
   <header>
     <h1>รับปรึกษาสุขภาพจิต</h1>
-    <p>ใส่ใจสุขภาพใจ ปรึกษาได้ง่าย ๆ กับผู้เชี่ยวชาญ</p>
+    <p>ใจดี ใส่ใจ ให้คำปรึกษาอย่างอบอุ่น</p>
   </header>
 
   <main>
-    <h2>ติดต่อขอรับคำปรึกษา</h2>
-    <form action="#" method="POST" onsubmit="return submitForm(event)">
+    <h2>ติดต่อขอคำปรึกษา</h2>
+    <form onsubmit="return submitForm(event)" action="#" method="POST">
       <label for="name">ชื่อ-นามสกุล</label>
       <input type="text" id="name" name="name" placeholder="กรอกชื่อของคุณ" required />
 
@@ -132,4 +157,23 @@
       <input type="email" id="email" name="email" placeholder="example@email.com" required />
 
       <label for="message">ข้อความ</label>
-      <textarea id="message" name="message" pla
+      <textarea id="message" name="message" placeholder="เขียนสิ่งที่ต้องการปรึกษา" required></textarea>
+
+      <button type="submit">ส่งคำปรึกษา</button>
+    </form>
+  </main>
+
+  <footer>
+    &copy; 2025 รับปรึกษาสุขภาพจิต — ติดต่อสอบถามเพิ่มเติม: support@brightmind.com
+  </footer>
+
+  <script>
+    function submitForm(event) {
+      event.preventDefault();
+      alert('ขอบคุณสำหรับข้อความของคุณ! เราจะติดต่อกลับโดยเร็วที่สุด 😊');
+      event.target.reset();
+      return false;
+    }
+  </script>
+</body>
+</html>
